@@ -317,8 +317,75 @@ The getMax function is defined as inline.
 During compilation, the compiler replaces getMax(10, 20) with (10 > 20) ? 10 : 20 to avoid the function call overhead.*/
 
 //Function overloading is a concept that allows multiple functions with the same name but different parameter lists.
+//parameters are in function definition, arguments are in function call.
 
+/*
+#include<iostream>
+using namespace std;
 
+// Single sum function with default parameters
+int sum(int a, int b, int c = 0, int d = 0) {
+    return a + b + c + d;
+}
+
+int main() {
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    cout << sum(a, b) << endl;       // sum of 2 numbers
+    cout << sum(a, b, c) << endl;    // sum of 3 numbers
+    cout << sum(a, b, c, d) << endl; // sum of 4 numbers
+
+    return 0;
+}
+*/
+
+/*
+array declaration
+index starts from 0
+int arr1[10];
+int arr[4] = { 10, 20, 30, 40};
+access data : arr[index]
+Address of arr[2] = Address of arr[0] + (2 * sizeof(int))
+
+int* arr = new int[10]; // Dynamically allocated fixed-size array
+delete[] arr;           // Manually deallocate memory*/
+
+/*
+// Calculate and print the total size of the array
+ int arr[] = {10, 20, 30, 40, 50};
+cout << sizeof(arr) << "\n"; // Output: 20
+Total Size = Number of Elements * Size of Each Element
+Total Size = 5 * 4 = 20 bytes
+*/
+
+/*
+// Calculate the number of elements in the array
+int arr[] = {10, 20, 30, 40, 50};
+int n = sizeof(arr) / sizeof(arr[0]);
+cout << n << "\n"; // Output: 5
+Number of Elements = Total Size / Size of Each Element
+Number of Elements = 20 / 4 = 5
+*/
+
+/*total elements=array length
+display array:
+normal loop
+for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+range based for loop(to display)
+ int arr[] = {10, 40, 30, 45};
+
+    for (int x : arr) {
+        cout << x << " ";
+    }
+(to modify we use &x instead of x)
+*/
+/*arr[2] = 7;
+-arr[2] = -7;
+*/
 
 
 
